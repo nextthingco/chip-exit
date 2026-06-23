@@ -1,3 +1,9 @@
+chip-exit (0.5) stable; urgency=low
+
+  * Python 3 update
+
+ -- Ben Young <software@nextthing.co>  Tue, 23 June 2026 19:45:48 -0800
+
 chip-exit (0.4) stable; urgency=low
 
   * Fixed syntax error preventing shutdown.
