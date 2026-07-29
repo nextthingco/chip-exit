@@ -1,3 +1,17 @@
+chip-exit (0.6) trixie; urgency=low
+
+  * Fix FTBFS: drop debian/compat (9), which conflicted with the
+    debhelper-compat (= 13) build-dep added in 0.5. dh has refused to build with
+    the level declared in both places since debhelper 12. Now compat 13.
+  * Depend on gir1.2-gtk-3.0. python3-gi only provides the PyGObject binding,
+    not the GTK typelibs -- without it `gi.require_version("Gtk", "3.0")` raises
+    ValueError at startup and the dialog never appears. The one package covers
+    both the Gtk-3.0 and Gdk-3.0 typelibs the script imports.
+  * Remove the Suspend button. Suspend/resume is not reliable on the CHIP, and a
+    button that can hang the board is worse than no button.
+
+ -- Ben Young <computermouth@proton.me>  Tue, 28 Jul 2026 12:00:00 -0500
+
 chip-exit (0.5) stable; urgency=low
 
   * Python 3 update

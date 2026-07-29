@@ -8,7 +8,7 @@ Homepage: https://crunchbangplusplus.org
 
 Package: chip-exit
 Architecture: all
-Depends: ${misc:Depends}, python3-gi, upower
+Depends: ${misc:Depends}, python3-gi, gir1.2-gtk-3.0, upower
 Description: Chip logout script.
  GUI logout/shutdown/restart/lock
  script.
